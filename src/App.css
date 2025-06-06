@@ -1,0 +1,202 @@
+html, body {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+#root, .App {
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  background-image: url('assets/Images/ArgyleBackground.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: white;
+}
+#root {
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding: 2rem 0;
+}
+.App {
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* NAVBAR CSS SECTION */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid white;
+  background-color: #0d0142; /* dark background for the navbar */
+  z-index: 1000; /* ensures navbar is above other content */   
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0d0142;
+  display: flex;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+nav h1{
+  color: white;
+  padding: 0;
+  background-color: #0d0142;
+
+
+}
+
+
+nav li a {
+  display: block;
+  color: white; 
+  text-align: center; 
+  padding: 14px 16px;
+  text-decoration: none; 
+  background-color: #0d0142;
+
+}
+
+nav li a:hover {
+  background-color: #e0218a;
+  border-radius: 50%;
+  color: white; 
+}
+/* End of NAVBAR CSS SECTION */
+/* Playboard CSS SECTION */
+.playboard {
+  width: 90vw;        
+  max-width: 600px;     
+  padding: 2em 1em;     
+  margin: 80px auto 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  background-color: #0d0142;
+  border: 2px double white;
+  border-radius: 25px;
+  box-sizing: border-box; 
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.playboard.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* End of Playboard CSS SECTION */
+/*playerInfo-form CSS SECTION */
+.playerInfo-form {
+  margin: 5% auto;
+}
+/* QUIZBOARD CSS SECTION */
+.quizBoard {
+  width: 90vw;        
+  max-width: 600px;     
+  padding: 2em 1em;     
+  margin: 80px auto 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  background-color: #0d0142;
+  border: 2px double white;
+  border-radius: 25px;
+  box-sizing: border-box; 
+}
+.quizBoard {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.quizBoard.fade-in {
+  opacity: 1;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1em; /* space between buttons */
+  align-items: stretch;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.answer-options button {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  background: #1a1a5e;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.answer-options button:hover {
+  background: #3a3a8e;
+}
+/* End of QUIZBOARD CSS SECTION */
+/*Media Queries for Responsive Design*/
+@media (max-width: 600px) {
+   nav {
+    justify-content: center;
+    align-items: center;
+  }
+  nav h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    line-height: 60px; 
+  }
+  nav ul {
+    display: none;
+  }
+  nav li a {
+    display: none;
+  }
+}
+.start-quiz-button {
+  display: block;
+  margin: 2em auto;
+}
+.select{
+  display:block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
